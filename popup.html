@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress DZ - Student Portal</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="app">
+        
+        <div id="loginScreen" class="screen">
+            <div class="header">
+                <div class="app-icon">
+                    <img src="icon128.png" alt="Progress DZ" />
+                </div>
+                <h1>Progress DZ</h1>
+                <p>Student Portal</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+            <div id="loginError" class="error hidden"></div>
+            <div id="loginLoading" class="loading hidden">Logging in...</div>
+        </div>
+
+        <div id="dashboardScreen" class="screen hidden">
+            <div class="header">
+                <div class="user-info">
+                    <img id="userPhoto" src="" alt="Profile" class="profile-pic">
+                    <div class="user-details">
+                        <h2 id="userName"></h2>
+                        <p id="userRole"></p>
+                        <button id="logoutBtn" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enrollment-selector">
+                <div class="selector-header">
+                    <label for="enrollmentSelect">Select Academic Year:</label>
+                    <button id="openWebBtn" class="web-btn" title="Open in New Tab for Larger View">
+                        <span class="icon">🌐</span>
+                        <span>Web View</span>
+                    </button>
+                </div>
+                <div class="custom-select-wrapper">
+                    <select id="enrollmentSelect">
+                        <option value="">Loading enrollments...</option>
+                    </select>
+                    <div class="select-arrow">
+                        <span>▼</span>
+                    </div>
+                </div>
+
+                <div id="semesterStatus" class="semester-status hidden">
+                    <span id="semesterStatusText">Loading semesters...</span>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <button class="menu-item" id="gradesBtn">
+                    <span class="icon">📊</span>
+                    <span>Assessments & Exams</span>
+                </button>
+                <button class="menu-item" id="scheduleBtn">
+                    <span class="icon">📅</span>
+                    <span>Schedule</span>
+                </button>
+                <button class="menu-item" id="bilanBtn">
+                    <span class="icon">📈</span>
+                    <span>Semester Summary</span>
+                </button>
+                <button class="menu-item" id="studentInfoBtn">
+                    <span class="icon">👤</span>
+                    <span>Student Info</span>
+                </button>
+                <button class="menu-item" id="groupsBtn">
+                    <span class="icon">👥</span>
+                    <span>Groups</span>
+                </button>
+                <button class="menu-item" id="yearlyBilanBtn">
+                    <span class="icon">🎓</span>
+                    <span>Yearly GPA</span>
+                </button>
+            </div>
+
+            <div class="watermark">
+                <p>Made by <a href="https://github.com/abdelghani-amrani" target="_blank">Abdelghani Amrani</a></p>
+            </div>
+        </div>
+
+        <div id="contentScreen" class="screen hidden">
+            <div class="content-header">
+                <button id="backBtn" class="back-btn">← Back</button>
+                <h2 id="contentTitle"></h2>
+            </div>
+            <div id="contentBody" class="content-body"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

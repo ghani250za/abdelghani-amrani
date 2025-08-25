@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Progress DZ - Student Portal",
+  "version": "1.0.0",
+  "description": "بوابة الطالب الجزائرية - مطورة من طرف Abdelghani Amrani",
+  "author": "Abdelghani Amrani",
+  "homepage_url": "https://github.com/abdelghani-amrani",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://progres.mesrs.dz/*"
+  ],
+  "action": {
+    "default_title": "Progress DZ - Student Portal",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "commands": {
+    "open-in-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P"
+      },
+      "description": "Open Progress DZ in a new tab"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
